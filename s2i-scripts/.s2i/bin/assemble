@@ -9,14 +9,14 @@ echo "---> Enabling s2i support in httpd24 image"
 config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
-echo "---> Copying files"
+echo "---> Begin copy of html files "
 cp -Rf /tmp/src/*.html ./
 
-echo "---> Creating info.html"
-DATE=`date "+%b %d, %Y @ %H:%M %p"`
+DATE='date "+%b %d, %Y @ %H:%M %p"'
 
+echo "--> Creating info.html"
 echo "Page built on $DATE" >> info.html
-echo "Proudly served by the Apache HTTP Server version $HTTPD_VERSION" >> info.html
+echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> info.html
 
 ######## CUSTOMIZATION ENDS HERE ############
 
